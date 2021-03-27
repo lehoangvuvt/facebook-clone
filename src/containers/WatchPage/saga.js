@@ -63,7 +63,7 @@ function* getModalInfo({ id, name, info, position, trailer }) {
     }
 }
 
-export default function* watchReducer() {
+export default function* watchSaga() {
     yield takeLatest(constants.GET_ALL_SHOWS, getAllShows);
     yield takeLatest(constants.GET_FEATURED_SHOW, getFeaturedShow);
     yield takeLatest(constants.GET_MODAL_INFO, getModalInfo);
