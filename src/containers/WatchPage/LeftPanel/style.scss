@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+$noto-font: "Noto Sans", sans-serif;
+$roboto-font: "Roboto", sans-serif;
+$open-font: "Open Sans", sans-serif;
+$dark-grey: #18191a;
+$normal-grey: #242527;
+$light-grey: #4f5a66;
+$white-80: #e4e6eb;
+$light-blue: #0084ff;
+
+.watch-page {
+    &__left-panel {
+        position: fixed;
+        width: 23%;
+        background: $normal-grey;
+        top: 8%;
+        height: 92%;
+        left: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        z-index: 10;
+        -webkit-box-shadow: 8px 0px 13px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 8px 0px 13px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 8px 0px 13px 0px rgba(0, 0, 0, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        box-sizing: border-box;
+
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+
+        &__search-video {
+            width: 100%;
+            height: 16%;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: flex-start;
+
+            &__header {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                &__title {
+                    height: 80%;
+                    width: 83%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    & > p {
+                        color: rgba(255, 255, 255, 1);
+                        font-family: $noto-font;
+                        font-weight: bold;
+                        font-size: 1.1em;
+                        padding-left: 20px;
+                    }
+                }
+
+                &__btn {
+                    height: 80%;
+                    width: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+
+                    & > div {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        width: 68%;
+                        height: 83%;
+                        border-radius: 50%;
+                        font-size: 1.2em;
+                        color: white;
+                        background-color: rgba(255, 255, 255, 0.1);
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.2);
+                        }
+                    }
+                }
+            }
+
+            &__search-bar {
+                position: relative;
+                width: 95%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: flex-start;
+
+                &::before {
+                    font-family: "Font Awesome 5 Free";
+                    content: "\f002";
+                    font-weight: 900;
+                    position: absolute;
+                    top: 12%;
+                    left: 6%;
+                    height: 50%;
+                    font-size: 1.1em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #9ea0a4;
+                }
+
+                & > input {
+                    width: 80%;
+                    height: 70%;
+                    border-radius: 50px;
+                    border: none;
+                    outline: none;
+                    background-color: #3a3b3c;
+                    padding-left: 40px;
+                    padding-right: 10px;
+                    font-family: $roboto-font;
+                    vertical-align: center;
+                    color: white;
+                    font-size: 0.9em;
+
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.55);
+                    }
+                }
+            }
+        }
+
+        &__nav-bar {
+            width: 100%;
+            height: 85%;
+            overflow-y: scroll;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: rgba(255, 255, 255, 0.4);
+            }
+
+            &__options {
+                width: 95%;
+                height: 230px;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                align-items: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                &__option {
+                    width: 100%;
+                    height: 23.5%;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    border-radius: 6px;
+                    transition: background-color 0.2s ease;
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.1);
+                    }
+
+                    &__left {
+                        width: 15%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &__circle {
+                            width: 80%;
+                            height: 70%;
+                            background-color: rgba(255, 255, 255, 0.15);
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transform: scale(0.95);
+
+                            & > i {
+                                font-size: 1.35em;
+                                color: white;
+                            }
+                        }
+                    }
+
+                    &__right {
+                        width: 83%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        & > p {
+                            font-family: $roboto-font;
+                            color: $white-80;
+                            font-weight: bold;
+                            padding-left: 10px;
+                            font-size: 0.8em;
+                            letter-spacing: 0.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

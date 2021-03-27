@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+$roboto-font: "Roboto", sans-serif;
+$noto-font: "Noto Sans", sans-serif;
+$dark-grey: #18191a;
+$normal-grey: #242527;
+$light-grey: #3a3b3c;
+$white-80: #e4e6eb;
+$light-blue: #0084ff;
+
+.watch-page {
+    &__main-content {
+        &__shows-container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            &__featured-show {
+                position: relative;
+                width: 100%;
+                height: 500px;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                z-index: 1;
+                align-items: flex-end;
+                overflow: hidden;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.05);
+                }
+
+                &__text-holder {
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 15%;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        height: 100%;
+                        width: 102%;
+                        filter: blur(30px);
+                        z-index: 1;
+                    }
+
+                    &__header {
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        z-index: 2;
+
+                        & > p {
+                            padding-left: 30px;
+                            font-family: $roboto-font;
+                            color: #eeeeee;
+                            text-transform: uppercase;
+                            font-size: 0.75em;
+                            font-weight: bold;
+                            letter-spacing: 0.5px;
+                        }
+                    }
+
+                    &__name-container {
+                        width: 100%;
+                        height: 25%;
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        z-index: 2;
+
+                        &__name {
+                            width: 80%;
+                            height: 40%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            @media screen and (max-width: 900px) {
+                                width: 60%;
+                                height: 100%;
+                            }
+
+                            & > p {
+                                padding-left: 30px;
+                                font-family: $noto-font;
+                                color: #fefefe;
+                                font-size: 1.4em;
+                                font-weight: bold;
+                                letter-spacing: 0.5px;
+                                text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+                            }
+                        }
+
+                        &__right {
+                            width: 20%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-start;
+                            cursor: pointer;
+
+                            @media screen and (max-width: 900px) {
+                                width: 40%;
+                            }
+
+                            &__button {
+                                min-width: 60%;
+                                height: 35px;
+                                background-color: rgba(255, 255, 255, 0.1);
+                                border-radius: 5px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-family: $roboto-font;
+                                font-size: 0.9em;
+                                transition: all 0.2s ease;
+                                margin-right: 10%;
+                                font-weight: bold;
+                                color: #e8e7ec;
+                                padding-left: 5px;
+                                padding-right: 5px;
+                                padding-top: 2px;
+                                padding-bottom: 2px;
+
+                                &:hover {
+                                    background-color: rgba(255, 255, 255, 0.3);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__movies-list-container {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                align-items: center;
+                z-index: 3;
+
+                &__header {
+                    width: 95%;
+                    height: 75px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-content: flex-end;
+                    align-items: flex-end;
+
+                    @media screen and (max-width: 900px) {
+                        width: 100%;
+                    }
+
+                    & > p {
+                        font-family: $roboto-font;
+                        padding-left: 3px;
+                        font-size: 1em;
+                        letter-spacing: 0.5px;
+                        color: $white-80;
+                        font-weight: bold;
+                    }
+                }
+
+                &__list {
+                    width: 95%;
+                    height: auto;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    align-content: flex-start;
+                    margin-bottom: 20px;
+
+                    @media screen and (max-width: 900px) {
+                        width: 100%;
+                    }
+
+                    &__movie {
+                        width: 15.66%;
+                        max-height: 280px;
+                        margin-right: 0.5%;
+                        margin-left: 0.5%;
+                        margin-bottom: 10px;
+                        border-radius: 5px;
+                        display: grid;
+                        place-items: start center;
+                        overflow: hidden;
+                        cursor: pointer;
+
+                        @media screen and(max-width:900px) {
+                            width: 32%;
+                            margin-bottom: 5px;
+                        }
+
+                        & > img {
+                            display: block;
+                            max-width: 100%;
+                            max-height: 100%;
+                            width: auto;
+                            height: auto;
+                            transition: all 0.5s ease;
+                            filter: brightness(95%);
+                            border-radius: 5px;
+
+                            &:hover {
+                                transform: scale(1.05);
+                                filter: brightness(100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

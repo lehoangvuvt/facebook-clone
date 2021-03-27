@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$roboto-font: "Roboto", sans-serif;
+$dark-grey: #18191a;
+$normal-grey: #242527;
+$light-grey: #3a3b3c;
+$white-80: #e4e6eb;
+$light-blue: #0084ff;
+
+.left-panel {
+    position: fixed;
+    width: 25%;
+    background-color: $dark-grey;
+    top: 8%;
+    height: 92%;
+    left: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+
+    &__item {
+        width: 85%;
+        height: 50px;
+        margin-left: 10px;
+        border-radius: 10px;
+        margin-top: 5px;
+        transition: all 0.1s ease;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:nth-child(1) {
+            margin-top: 15px;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &__icon {
+            width: 18%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4em;
+            color: $white-80;
+        }
+
+        &__name {
+            width: 82%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: $white-80;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-left: 5px;
+            font-family: $roboto-font;
+            letter-spacing: 0.5px;
+        }
+    }
+}

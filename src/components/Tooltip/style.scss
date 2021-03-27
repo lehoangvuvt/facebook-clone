@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$roboto-font: "Roboto", sans-serif;
+$dark-grey: #18191a;
+$normal-grey: #242527;
+$light-grey: #3a3b3c;
+$white-80: #e4e6eb;
+$light-blue: #0084ff;
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    left: auto;
+    right: auto;
+    top: -70%;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $roboto-font;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    border-radius: 15px;
+}
