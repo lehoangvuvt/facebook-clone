@@ -17,7 +17,7 @@ $light-blue: #0084ff;
             }
             position: relative;
             width: 70%;
-            height: 600px;
+            height: 625px;
             background-color: $normal-grey;
             margin-bottom: 20px;
             border-radius: 8px;
@@ -288,7 +288,6 @@ $light-blue: #0084ff;
                 &__comments {
                     width: 10%;
                     height: 100%;
-                    background-color: pink;
                     display: flex;
                     justify-content: center;
                     align-items: center;

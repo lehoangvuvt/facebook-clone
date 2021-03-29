@@ -1,4 +1,4 @@
-import { put, delay, call, takeLatest } from 'redux-saga/effects';
+import { put, delay, call, takeLatest, take } from 'redux-saga/effects';
 import * as actions from './action';
 import { contacts } from '../../data/dummyContacts';
 import { stories } from '../../data/dummyStories';

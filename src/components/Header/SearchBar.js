@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import './style.scss';
 
-const SearchBar = (props) => {
+const SearchBar = ({ searchHistoryResults }) => {
     const { register, handleSubmit } = useForm();
     const [searchString, setSearchString] = useState(null);
 
@@ -46,16 +47,22 @@ const SearchBar = (props) => {
                         <input id="submit-btn" style={{ display: 'none' }} type="submit" />
                     </form>
                 </div>
-                {searchString !== null ?
-                    <div className="header__search-section__search-bar-container__recent-search">
-
-                    </div>
+                {searchString !== null && searchHistoryResults && searchHistoryResults.length > 0 ?
+                    searchHistoryResults.map(search =>
+                        <div className="header__search-section__search-bar-container__recent-search">
+                            {search.searchString}
+                        </div>
+                    )
                     :
                     null
                 }
             </div>
         </div>
     )
+}
+
+SearchBar.propTypes = {
+    searchHistoryResults: PropTypes.array,
 }
 
 export default SearchBar;

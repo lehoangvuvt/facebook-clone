@@ -33,7 +33,7 @@ function* getAllShows({ page }) {
 function* getFeaturedShow() {
     try {
         const results = yield call(api.getFeaturedShow);
-        const m = results.data.results[2];
+        const m = results.data.results[17];
         const image = "http://image.tmdb.org/t/p/original" + m.poster_path;
         const backdropImage = "http://image.tmdb.org/t/p/original" + m.backdrop_path;
         const movie = {

@@ -1,5 +1,9 @@
-export const CHANGE_OPTION = "containers/app/CHANGE_OPTION";
-export const SET_CURRENT_TOOLTIP = "containers/app/SET_CURRENT_TOOLTIP";
+export const CHANGE_OPTION = "containers/App/CHANGE_OPTION";
+export const SET_CURRENT_TOOLTIP = "containers/App/SET_CURRENT_TOOLTIP";
+
+export const GET_SEARCH_HISTORY = "containers/App/GET_SEARCH_HISTORY";
+export const GET_SEARCH_HISTORY_SUCCESS = "containers/App/GET_SEARCH_HISTORY_SUCCESS";
+export const GET_SEARCH_HISTORY_FAIL = "containers/App/GET_SEARCH_HISTORY_FAIL";
 
 export const TOGGLE_ON_MODAL = "containers/homepage/TOGGLE_ON_MODAL";
 export const TOGGLE_OFF_MODAL = "containers/homepage/TOGGLE_OFF_MODAL";

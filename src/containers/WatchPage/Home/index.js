@@ -58,13 +58,6 @@ const Home = () => {
                 date={"March 16 at 12:00 PM "}
                 reactions={reactions}
             />
-            <FeedVideoContainer
-                videoId={1}
-                title={"Một bài hát tình cảm Eric Clapton viết tặng con trai đã mất của ông"}
-                username={"phuong123"}
-                date={"March 16 at 12:00 PM "}
-                reactions={reactions2}
-            />
         </div>
     )
 }

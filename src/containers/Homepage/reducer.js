@@ -24,7 +24,7 @@ export const initialState = {
     },
     openChatBox: {
         boxes: [],
-    }
+    },
 }
 
 export default function homeReducer(state = initialState, action) {
